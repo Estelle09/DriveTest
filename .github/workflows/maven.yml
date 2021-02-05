@@ -25,10 +25,8 @@ jobs:
       with:
         java-version: 15
     - name: Build with Maven
-      run: mvn -B package --file NetBeansProjects/TPPortefeuilleFL/pom.xml
+      run: mvn -B package --file pom.xml
     - name: Sonar with Maven
-      run: mvn verify sonar:sonar --file NetBeansProjects/TPPortefeuilleFL/pom.xml
+      run: mvn verify sonar:sonar --file NetBeansProjects/Drive/pom.xml
     - name: Check Javadoc
-      run: mvn javadoc:javadoc --file NetBeansProjects/TPPortefeuilleFL/pom.xml
-    - name: Check Licences
-      run: mvn apache-rat:check --file NetBeansProjects/TPPortefeuilleFL/pom.xml
+      run: mvn javadoc:javadoc --file NetBeansProjects/Drive/pom.xml
